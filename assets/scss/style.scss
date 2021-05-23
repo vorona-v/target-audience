@@ -1,5 +1,5 @@
 @import "mixin";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:wght@400;700&display=swap');
 
 .bg-button-wrapper {
     max-width: 320px;
@@ -106,12 +106,14 @@
 .application-design-wrap {
     @include flexbox;
     padding: 160px 0 40px;
+    margin-bottom: 44px;
     .application-design {
         width: 50%;
         h1 {
             font-family: "Montserrat", sans-serif;
             font-weight: 300;
             font-size: 60px;
+            margin-bottom: 20px;
         }
         p {
             font-family: "Open Sans", sans-serif;
@@ -119,10 +121,12 @@
             font-size: 20px;
             line-height: 1.5;
             color: #000000;
+            margin-bottom: 33px;
         }
     }
     .application-design-image {
-        width: 50%;
+        width: 58%;
+        margin-right: -62px;
     }
 }
 
@@ -230,7 +234,7 @@
     @include flexbox;
     .applications-info-item {
         width: 33.33%;
-        padding: 19px 20px;
+        padding: 19px 20px 32px;
         border-top: 1px solid rgba(255,255,255,0.3);
         border-right: 1px solid rgba(255,255,255,0.3);
         
@@ -248,16 +252,20 @@
 }
 
 .mobile-shop-section {
+    margin: 84px auto 93px;
     .section-title {
         @include flexbox;
         align-items: center;
+        line-height: 1.4;
+        margin-bottom: 87px;
         br {
             display: none;
         }
         img {
             flex-shrink: 0;
             vertical-align: bottom;
-            margin-left: 30px;
+            margin-left: 15px;
+            margin-right: 39px;
         }
     }
     .border-top {
@@ -282,9 +290,10 @@
 
 .loyalty-program-section {
     @include flexbox;
-    align-items: center;
-    
+    //align-items: center;
+    margin-bottom: 81px;
     .left-column {
+        max-width: 372px;
         .item-primary-title {
             color: #000000;
             font-size: 40px;
@@ -294,13 +303,16 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: inline-block;
+            margin-bottom: 21px;
             span {
                 font-size: 87px;
                 background: linear-gradient(237.62deg, #5287FC 1.77%, #DD5DFC 87.57%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 display: inline-block;
-                transform: skew(-7deg,-18deg);
+                transform: skew(0deg, -26deg);
+                font-weight: 200;
+                font-family: 'Montserrat', sans-serif;
             }
         }
         .item-text {
@@ -310,11 +322,22 @@
     
     .center-column {
         flex-shrink: 0;
-        margin: 0 100px;
+        margin: 0 123px 0 100px;
+    }
+    
+    .right-column {
+        padding-right: 70px;
+        .item-text {
+            line-height: 1.33;
+        }
+    }
+    
+    .loyalty-program-items {
+        margin-top: 87px;
     }
     
     .loyalty-program-item {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
         &:last-child {
             margin-bottom: 0;
         }
@@ -322,12 +345,12 @@
 }
 
 .packages-and-prices-section {
-    padding: 70px 0 100px;
+    padding: 63px 0 100px;
     background: radial-gradient(33.61% 118.78% at 4.37% 51.7%, #DD5DFC 0%, rgba(192, 34, 249, 0) 100%), linear-gradient(254.7deg, #DD5DFC 5.62%, #7252FC 74.01%);
     background-blend-mode: lighten, normal;
     
     .section-title {
-        margin: 0 0 50px;
+        margin: 0 0 56px;
     }
     .packages-and-prices-text {
         max-width: 946px;
@@ -385,6 +408,7 @@
             font-weight: 500;
             line-height: 1.1;
             font-family: 'Montserrat', sans-serif;
+            margin-bottom: 3px;
         }
     }
     .link-to-buy {
@@ -408,7 +432,9 @@
         }
     }
     .marketplace-link {
-        margin-top: 10px;
+        margin-top: 15px;
+        font-size: 18px;
+        letter-spacing: 0.5px;
         @include inline-flex;
         align-items: center;
         background: linear-gradient(237.62deg, #5287FC 1.77%, #DD5DFC 87.57%);
@@ -423,7 +449,7 @@
 
 .contact-form-section {
     background-color: rgba(0,0,0,0.2);
-    padding: 50px 77px 60px 35px;
+    padding: 50px 77px 66px 35px;
     position: relative;
     
     @include flexbox;
@@ -447,6 +473,7 @@
         font-weight: 300;
         line-height: 1.35;
         font-family: 'Montserrat', sans-serif;
+        margin-bottom: 2px;
     }
     
     .contact-phone-form-wrap {
@@ -472,6 +499,9 @@
         max-width: 581px;
         width: 100%;
         font-size: 18px;
+        .contact-form-title {
+            margin-bottom: 17px;
+        }
         input {
             width: 100%;
             color: #FFFFFF;
@@ -626,10 +656,12 @@
             width: 47%;
             h1 {
                 font-size: 30px;
+                margin-bottom: 7px;
             }
     
             p {
                 font-size: 18px;
+                margin-bottom: 13px;
             }
         }
         .application-design-image {
@@ -720,7 +752,7 @@
             display: none;
         }
         .contact-phone-form-wrap {
-            margin-bottom: 30px;
+            margin-bottom: 28px;
             .contact-tell {
                 font-size: 30px;
             }
@@ -733,6 +765,7 @@
             font-size: 30px;
         }
     }
+
 }
 
 @media screen and (max-width: 640px) {
@@ -746,6 +779,7 @@
     .application-design-wrap {
         @include flexbox;
         flex-direction: column;
+        padding: 20px 0 35px;
         &.content {
             width: calc(100% - 40px);
             margin: 0 auto;
@@ -753,6 +787,7 @@
     
         .application-design {
             width: 100%;
+            margin-bottom: 26px;
         }
         .application-design-image {
             width: auto;
@@ -763,6 +798,7 @@
         flex-wrap: wrap;
         .what-do-you-get-item {
             width: 100%;
+            min-height: 155px;
             padding: 15px 0;
             border-right: none;
             background-position: 100% bottom;
@@ -778,6 +814,18 @@
                 display: none;
             }
         }
+        .item-app-bg {
+            background-size: 61% auto;
+        }
+        .item-color-bg {
+            background-size: 51% auto;
+        }
+        .item-support-bg {
+            background-size: 59% auto;
+        }
+    }
+    .applications-info-section {
+        padding: 73px 0 2px;
     }
     
     .applications-info-wrap {
@@ -789,24 +837,28 @@
         }
     }
     
+    
     .mobile-shop-section {
+        margin-top: 40px;
+        margin-bottom: 53px;
         .section-title {
             margin-right: 0;
             flex-direction: column;
             align-items: flex-start;
             line-height: 1.4;
+            margin-bottom: 47px;
             br {
                 display: block;
             }
              img {
-                 margin: -17px auto 0;
+                 margin: -21px auto 0;
                  max-width: 160px;
                  width: 100%;
             }
         }
         .mobile-shop-info-item {
             width: 100%;
-            padding-left: 0;
+            padding: 12px 20px 28px 0;
             &:nth-child(odd) {
                 border-right: none;
             }
@@ -814,27 +866,42 @@
     }
     
     .loyalty-program-section {
+        margin-bottom: 60px;
         .left-column {
             width: 100%;
+            .item-primary-title {
+                margin-bottom: 13px;
+            }
         }
         .center-column {
-            width: 82%;
+            width: 78%;
             margin: 0 auto;
             padding-left: 0;
         }
         .right-column {
             flex-wrap: wrap;
             margin: 0;
+            padding: 0;
             .loyalty-program-item {
                 width: 100%;
                 padding: 0;
             }
         }
+        .loyalty-program-items {
+            margin-top: 0;
+        }
+        .loyalty-program-item {
+            margin-bottom: 13px;
+        }
     }
     
     .packages-and-prices-section {
+        padding: 55px 0 100px;
+        .section-title {
+            margin: 0 0 37px;
+        }
         .packages-and-prices-text {
-            margin: 30px 0 50px;
+            margin: 12px 0 50px;
         }
     }
     
