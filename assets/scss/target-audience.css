@@ -149,6 +149,41 @@
 .application-design-wrap .application-design-image {
   width: 58%;
   margin-right: -62px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.application-design-wrap .design-image-wrap {
+  width: 190px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.application-design-wrap .design-image-wrap img {
+  width: 100%;
+  vertical-align: bottom;
+}
+.application-design-wrap .design-image-1 {
+  right: 0;
+  width: 250px;
+}
+.application-design-wrap .design-image-2 {
+  right: 50px;
+}
+.application-design-wrap .design-image-3 {
+  right: 100px;
+}
+.application-design-wrap .design-image-4 {
+  right: 150px;
+}
+.application-design-wrap .design-image-5 {
+  right: 200px;
+}
+.application-design-wrap .design-image-6 {
+  right: 250px;
 }
 
 .what-do-you-get-section {

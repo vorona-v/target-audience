@@ -127,6 +127,39 @@
     .application-design-image {
         width: 58%;
         margin-right: -62px;
+        
+        @include flexbox;
+        position: relative;
+    }
+    
+    .design-image-wrap {
+        width: 190px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        img {
+            width: 100%;
+            vertical-align: bottom;
+        }
+    }
+    .design-image-1 {
+        right: 0;
+        width: 250px;
+    }
+    .design-image-2 {
+        right: 50px;
+    }
+    .design-image-3 {
+        right: 100px;
+    }
+    .design-image-4 {
+        right: 150px;
+    }
+    .design-image-5 {
+        right: 200px;
+    }
+    .design-image-6 {
+        right: 250px;
     }
 }
 
