@@ -108,15 +108,16 @@
     padding: 160px 0 40px;
     margin-bottom: 44px;
     .application-design {
-        width: 50%;
-    
-        width: 100%;
-        max-width: 730px;
+        width: 48%;
+        
         h1 {
             font-family: "Montserrat", sans-serif;
             font-weight: 300;
             font-size: 60px;
             margin-bottom: 20px;
+            br {
+                display: none;
+            }
         }
         p {
             font-family: "Open Sans", sans-serif;
@@ -820,6 +821,9 @@
             h1 {
                 font-size: 30px;
                 margin-bottom: 7px;
+                br {
+                    display: block;
+                }
             }
     
             p {
