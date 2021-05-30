@@ -109,6 +109,9 @@
     margin-bottom: 44px;
     .application-design {
         width: 50%;
+    
+        width: 100%;
+        max-width: 730px;
         h1 {
             font-family: "Montserrat", sans-serif;
             font-weight: 300;
@@ -133,7 +136,6 @@
     }
     
     .design-image-wrap {
-        width: 190px;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -144,22 +146,33 @@
     }
     .design-image-1 {
         right: 0;
-        width: 250px;
+        width: 247px;
     }
     .design-image-2 {
-        right: 50px;
+        right: 160px;
+        width: 165px;
+        top: 23px;
     }
     .design-image-3 {
-        right: 100px;
+        right: 278px;
+        width: 165px;
+        top: 22px;
     }
     .design-image-4 {
-        right: 150px;
+        right: 396px;
+        width: 165px;
+        top: 21px;
     }
     .design-image-5 {
-        right: 200px;
+        right: 493px;
+        width: 232px;
+        top: -7px;
     }
     .design-image-6 {
-        right: 250px;
+        right: 589px;
+        width: 151px;
+        top: -8px;
+        z-index: 3;
     }
 }
 

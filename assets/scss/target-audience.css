@@ -131,6 +131,8 @@
 }
 .application-design-wrap .application-design {
   width: 50%;
+  width: 100%;
+  max-width: 730px;
 }
 .application-design-wrap .application-design h1 {
   font-family: "Montserrat", sans-serif;
@@ -157,7 +159,6 @@
   position: relative;
 }
 .application-design-wrap .design-image-wrap {
-  width: 190px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -168,22 +169,33 @@
 }
 .application-design-wrap .design-image-1 {
   right: 0;
-  width: 250px;
+  width: 247px;
 }
 .application-design-wrap .design-image-2 {
-  right: 50px;
+  right: 160px;
+  width: 165px;
+  top: 23px;
 }
 .application-design-wrap .design-image-3 {
-  right: 100px;
+  right: 278px;
+  width: 165px;
+  top: 22px;
 }
 .application-design-wrap .design-image-4 {
-  right: 150px;
+  right: 396px;
+  width: 165px;
+  top: 21px;
 }
 .application-design-wrap .design-image-5 {
-  right: 200px;
+  right: 493px;
+  width: 232px;
+  top: -7px;
 }
 .application-design-wrap .design-image-6 {
-  right: 250px;
+  right: 589px;
+  width: 151px;
+  top: -8px;
+  z-index: 3;
 }
 
 .what-do-you-get-section {
