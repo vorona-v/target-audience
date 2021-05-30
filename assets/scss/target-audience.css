@@ -238,11 +238,112 @@
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
+.applications-info-section .applications-slider .application-slide-wrap img {
+  border-radius: 10px;
+  vertical-align: bottom;
+  max-width: 46px;
+  max-height: 46px;
+  width: 100%;
+  height: 100%;
+}
 .applications-info-section .applications-slider .application-slide-wrap:hover {
   border-color: #FFFFFF;
 }
 .applications-info-section .applications-slider .slick-active .application-slide-wrap {
   background: rgba(255, 255, 255, 0.2);
+}
+.applications-info-section .application-name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-left: 10px;
+}
+.applications-info-section .applications-content-wrap {
+  margin: 70px 0 100px;
+}
+.applications-info-section .iphone-content-wrap .slick-slide {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  height: 559px;
+}
+.applications-info-section .iphone-content-wrap .slick-arrow {
+  top: initial;
+  bottom: -50px;
+  width: 40px;
+  height: 40px;
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.applications-info-section .iphone-content-wrap .slick-arrow:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.applications-info-section .iphone-content-wrap .slick-disabled {
+  cursor: auto;
+}
+.applications-info-section .iphone-content-wrap .slick-disabled:before {
+  opacity: 0.2;
+}
+.applications-info-section .iphone-content-wrap .slick-prev {
+  left: 25px;
+}
+.applications-info-section .iphone-content-wrap .slick-prev:before {
+  background-image: url("../images/arrow.svg");
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.applications-info-section .iphone-content-wrap .slick-next {
+  right: 25px;
+}
+.applications-info-section .iphone-content-wrap .slick-next:before {
+  background-image: url("../images/arrow.svg");
+}
+.applications-info-section .application-company-info {
+  height: 100%;
+}
+.applications-info-section .application-info-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.applications-info-section .application-info-wrap .section-title {
+  color: #ffffff;
+}
+.applications-info-section .item-text {
+  color: #ffffff;
+}
+.applications-info-section .iphone-content-body {
+  flex-grow: 1;
+  overflow: auto;
+}
+.applications-info-section .iphone-content-body::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.applications-info-section .iphone-content-body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .applications-content-wrap {
@@ -252,14 +353,48 @@
   display: -ms-flexbox;
   display: flex;
 }
-.applications-content-wrap .center-menu .iphone {
+.applications-content-wrap .left-menu-wrap {
+  flex-grow: 1;
+  max-width: 400px;
+}
+.applications-content-wrap .application-info-link {
+  max-width: 290px;
+  display: inline-block;
+  text-decoration-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1.5;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+}
+.applications-content-wrap .application-info-link:hover {
+  text-decoration-color: white;
+}
+.applications-content-wrap .center-menu-wrap {
+  width: 527px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: 0 10px;
+}
+.applications-content-wrap .center-menu-wrap .iphone-wrap {
   height: 782px;
+  box-sizing: border-box;
+  padding: 80px 105px 143px 109px;
   background-image: url("../images/iphone-bg.png");
   background-repeat: no-repeat;
 }
-.applications-content-wrap .center-menu .iphone-content {
+.applications-content-wrap .center-menu-wrap .iphone-content {
   display: none;
 }
+.applications-content-wrap .right-menu-wrap {
+  flex-grow: 1;
+  max-width: 340px;
+}
+.applications-content-wrap .right-menu-wrap .item-title {
+  color: #ffffff;
+}
+
 .applications-info-wrap {
   display: -webkit-box;
   display: -webkit-flex;
@@ -985,4 +1120,4 @@
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=target-audience.css.map */

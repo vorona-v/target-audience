@@ -196,6 +196,14 @@
             border-radius: 16px;
             cursor: pointer;
             @include transition(all .2s);
+            img {
+                border-radius: 10px;
+                vertical-align: bottom;
+                max-width: 46px;
+                max-height: 46px;
+                width: 100%;
+                height: 100%;
+            }
             &:hover {
                 border-color: #FFFFFF;
             }
@@ -207,18 +215,123 @@
             }
         }
     }
+    .application-name {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        color: #FFFFFF;
+        margin-left: 10px;
+    }
+    .applications-content-wrap {
+        margin: 70px 0 100px;
+    }
+    .iphone-content-wrap {
+        .slick-slide {
+            @include flexbox;
+            flex-direction: column;
+            height: 559px;
+        }
+        .slick-arrow {
+            top: initial;
+            bottom: -50px;
+            width: 40px;
+            height: 40px;
+            @include transform(translate(0, 0));
+            
+            &:before {
+                content: '';
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+                opacity: 1;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+        .slick-disabled {
+            cursor: auto;
+            &:before {opacity: .2}
+        }
+        .slick-prev {
+            left: 25px;
+            &:before {
+                background-image: url("../images/arrow.svg");
+                @include transform(rotate(180deg));
+            }
+        }
+        .slick-next {
+            right: 25px;
+            &:before {
+                background-image: url("../images/arrow.svg");
+            }
+        }
+    }
+    
+    .application-company-info {
+        height: 100%;
+    }
+    .application-info-wrap {
+        height: 100%;
+        @include flexbox;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        .section-title {
+            color: #ffffff;
+        }
+    }
+    .item-text {
+        color: #ffffff;
+    }
+    
+    .iphone-content-body {
+        flex-grow: 1;
+        overflow: auto;
+        @include scrollbar {
+            width: 5px;
+            background-color: rgba(0,0,0,0.3);
+        }
+        @include scrollbar-track {
+        
+        }
+        @include scrollbar-thumb {
+            background-color: rgba(0,0,0,0.7);
+        }
+    }
+    
 }
 .applications-content-wrap {
     @include flexbox;
-    .left-menu {
-    
+    .left-menu-wrap {
+        flex-grow: 1;
+        max-width: 400px;
     }
-    .center-menu {
-        .iphone {
+    .application-info-link {
+        max-width: 290px;
+        display: inline-block;
+        text-decoration-color: rgba(255,255,255,0.2);
+        color: #ffffff;
+        font-size: 24px;
+        line-height: 1.5;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 400;
+        &:hover {
+            text-decoration-color: rgba(255,255,255,1);
+        }
+    }
+    .center-menu-wrap {
+        width: 527px;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        margin: 0 10px;
+        .iphone-wrap {
             height: 782px;
+            box-sizing: border-box;
+            padding: 80px 105px 143px 109px;
             background-image: url("../images/iphone-bg.png");
             background-repeat: no-repeat;
-            
         }
         
         .iphone-content {
@@ -226,8 +339,12 @@
         }
         
     }
-    .right-menu {
-    
+    .right-menu-wrap {
+        flex-grow: 1;
+        max-width: 340px;
+        .item-title {
+            color: #ffffff;
+        }
     }
 }
 .applications-info-wrap {
