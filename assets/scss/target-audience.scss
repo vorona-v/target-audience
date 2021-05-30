@@ -106,7 +106,7 @@
 .application-design-wrap {
     @include flexbox;
     padding: 160px 0 40px;
-    margin-bottom: 44px;
+    margin-bottom: 127px;
     .application-design {
         width: 48%;
         
@@ -130,7 +130,8 @@
     }
     .application-design-image {
         width: 58%;
-        margin-right: -62px;
+        margin-right: -40px;
+        margin-top: -12px;
         
         @include flexbox;
         position: relative;
@@ -739,6 +740,27 @@
             width: 40%;
         }
     }
+    
+    .applications-info-section {
+        .iphone-content-wrap {
+            .slick-slide {
+                height: 447px;
+            }
+        }
+    }
+    
+    .applications-content-wrap {
+        .center-menu-wrap {
+            width: 426px;
+            margin: 0;
+            .iphone-wrap {
+                height: 635px;
+                padding: 46px 86px 143px 90px;
+                background-size: cover;
+            }
+        }
+    }
+    
     .what-do-you-get-section {
         .what-do-you-get-item {
             width: 33.333%;
@@ -816,6 +838,7 @@
     
     .application-design-wrap {
         padding: 20px 0 30px;
+        flex-direction: column;
         .application-design {
             width: 47%;
             h1 {
@@ -832,7 +855,8 @@
             }
         }
         .application-design-image {
-            width: 53%;
+            width: 100%;
+            min-height: 500px;
         }
     }
     
@@ -847,6 +871,24 @@
             }
         }
     }
+    
+    .applications-content-wrap {
+        flex-wrap: wrap;
+        margin: 35px 0 75px;
+        .left-menu-wrap {
+            max-width: 100%;
+            margin-bottom: 50px;
+            .application-info-content {
+                width: 45%;
+                padding: 0 39px 0 0;
+                
+            }
+        }
+        .application-info-wrap {
+            flex-direction: row;
+        }
+    }
+    
     .applications-info-wrap {
         .item-title {
             font-size: 26px;
@@ -993,7 +1035,34 @@
     }
     .applications-info-section {
         padding: 73px 0 2px;
+        .iphone-content-wrap .slick-slide {
+            height: 464px;
+        }
     }
+    
+    .applications-content-wrap {
+        .left-menu-wrap {
+            max-width: 100%;
+            margin-bottom: 50px;
+            .application-info-content {
+                width: 100%;
+                padding: 0 15px 0 0;
+                
+            }
+        }
+        .center-menu-wrap {
+            width: 436px;
+            margin: 0 0 0 -40px;
+            .iphone-wrap {
+                height: 649px;
+                padding: 50px 86px 150px 90px;
+            }
+        }
+        .application-info-wrap {
+            flex-direction: column;
+        }
+    }
+    
     
     .applications-info-wrap {
         flex-wrap: wrap;
