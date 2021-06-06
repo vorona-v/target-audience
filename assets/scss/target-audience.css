@@ -351,7 +351,7 @@
   width: 50px;
   background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
   background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #dd5dfc 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #d85dfd 100%);
   z-index: 10;
 }
 .applications-info-section .applications-slider .application-slide-wrap {
@@ -780,6 +780,16 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.packages-and-prices-items .link-to-buy:hover {
+  background: linear-gradient(237.62deg, #000000 100%, #000000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .packages-and-prices-items .item-text a {
   background: linear-gradient(237.62deg, #5287FC 1.77%, #DD5DFC 87.57%);
