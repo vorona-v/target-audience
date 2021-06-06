@@ -160,6 +160,22 @@
   display: flex;
   position: relative;
 }
+.application-design-wrap .application-design-image.animate .design-image-2 {
+  animation: gum-2 1s;
+}
+.application-design-wrap .application-design-image.animate .design-image-3 {
+  animation: gum-3 1s;
+}
+.application-design-wrap .application-design-image.animate .design-image-4 {
+  animation: gum-4 1s;
+}
+.application-design-wrap .application-design-image.animate .design-image-5 {
+  animation: gum-5 1s;
+}
+.application-design-wrap .application-design-image.animate .design-image-6 {
+  animation: gum-6 1s;
+  z-index: 3;
+}
 .application-design-wrap .design-image-wrap {
   position: absolute;
   top: 0;
@@ -171,33 +187,87 @@
 }
 .application-design-wrap .design-image-1 {
   right: 0;
-  width: 247px;
+  width: 32.25%;
 }
 .application-design-wrap .design-image-2 {
-  right: 160px;
-  width: 165px;
+  width: 21.5%;
   top: 23px;
+  right: 22%;
 }
 .application-design-wrap .design-image-3 {
-  right: 278px;
-  width: 165px;
+  width: 21.5%;
   top: 22px;
+  right: 37%;
 }
 .application-design-wrap .design-image-4 {
-  right: 396px;
-  width: 165px;
+  width: 21.5%;
   top: 21px;
+  right: 53%;
 }
 .application-design-wrap .design-image-5 {
-  right: 493px;
-  width: 232px;
+  width: 30.28%;
   top: -7px;
+  right: 65%;
 }
 .application-design-wrap .design-image-6 {
-  right: 589px;
-  width: 151px;
+  width: 19.7%;
   top: -8px;
-  z-index: 3;
+  right: 78%;
+}
+@keyframes gum-2 {
+  from {
+    right: 10%;
+  }
+  75% {
+    right: 26%;
+  }
+  to {
+    right: 22%;
+  }
+}
+@keyframes gum-3 {
+  from {
+    right: 12%;
+  }
+  75% {
+    right: 42%;
+  }
+  to {
+    right: 37%;
+  }
+}
+@keyframes gum-4 {
+  from {
+    right: 14%;
+  }
+  75% {
+    right: 57%;
+  }
+  to {
+    right: 53%;
+  }
+}
+@keyframes gum-5 {
+  from {
+    right: 14%;
+  }
+  75% {
+    right: 69%;
+  }
+  to {
+    right: 65%;
+  }
+}
+@keyframes gum-6 {
+  from {
+    right: 5%;
+  }
+  75% {
+    right: 82%;
+  }
+  to {
+    right: 78%;
+  }
 }
 
 .what-do-you-get-section {
@@ -268,6 +338,21 @@
   padding: 115px 0 66px;
   background: radial-gradient(33.61% 118.78% at 4.37% 51.7%, #DD5DFC 0%, rgba(192, 34, 249, 0) 100%), linear-gradient(254.7deg, #DD5DFC 5.62%, #7252FC 74.01%);
   background-blend-mode: lighten, normal;
+}
+.applications-info-section .applications-slider {
+  position: relative;
+}
+.applications-info-section .applications-slider:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #dd5dfc 100%);
+  z-index: 10;
 }
 .applications-info-section .applications-slider .application-slide-wrap {
   display: -webkit-box;
@@ -341,6 +426,9 @@
   background-size: cover;
   background-position: center;
 }
+.applications-info-section .iphone-content-wrap .slick-arrow:hover {
+  opacity: 0.75;
+}
 .applications-info-section .iphone-content-wrap .slick-disabled {
   cursor: auto;
 }
@@ -363,6 +451,23 @@
 }
 .applications-info-section .iphone-content-wrap .slick-next:before {
   background-image: url("../images/arrow.svg");
+}
+.applications-info-section .iphone-content-wrap .slick-next.animated {
+  animation: animate 2s;
+}
+@keyframes animate {
+  from {
+    right: 15px;
+  }
+  25% {
+    right: 25px;
+  }
+  50% {
+    right: 15px;
+  }
+  to {
+    right: 25px;
+  }
 }
 .applications-info-section .application-company-info {
   height: 100%;
@@ -406,6 +511,12 @@
   flex-grow: 1;
   max-width: 400px;
 }
+.applications-content-wrap .application-info-content.desktop {
+  display: block;
+}
+.applications-content-wrap .application-info-content.mobile {
+  display: none;
+}
 .applications-content-wrap .application-info-link {
   max-width: 290px;
   display: inline-block;
@@ -442,6 +553,18 @@
 }
 .applications-content-wrap .right-menu-wrap .item-title {
   color: #ffffff;
+}
+.applications-content-wrap .right-menu-wrap .item-content a {
+  display: inline-block;
+}
+.applications-content-wrap .right-menu-wrap .item-content a img {
+  max-width: 75%;
+  width: 100%;
+  vertical-align: bottom;
+  transition: filter 0.2s;
+}
+.applications-content-wrap .right-menu-wrap .item-content a:hover img {
+  filter: drop-shadow(2px 4px 6px black);
 }
 
 .applications-info-wrap {
@@ -658,11 +781,22 @@
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
-.packages-and-prices-items .item-text span {
+.packages-and-prices-items .item-text a {
   background: linear-gradient(237.62deg, #5287FC 1.77%, #DD5DFC 87.57%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.packages-and-prices-items .item-text a:hover {
+  background: linear-gradient(0deg, #000000 1.77%, #000000 87.57%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
 }
 .packages-and-prices-items .marketplace-link {
   margin-top: 15px;
@@ -677,10 +811,21 @@
   background: linear-gradient(237.62deg, #5287FC 1.77%, #DD5DFC 87.57%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
 .packages-and-prices-items .marketplace-link img {
   margin-left: 5px;
   vertical-align: bottom;
+}
+.packages-and-prices-items .marketplace-link:hover {
+  background: linear-gradient(0deg, #000000 1.77%, #000000 87.57%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
 }
 
 .contact-form-section {
@@ -819,30 +964,28 @@
   -webkit-text-fill-color: transparent;
 }
 
-@media screen and (max-width: 1200px) {
-  .application-design-wrap.content {
-    width: calc(100% - 30px);
-    margin-right: 0;
-  }
-  .application-design-wrap .application-design {
-    width: 60%;
-  }
-  .application-design-wrap .application-design-image {
-    width: 40%;
-  }
-
+@media screen and (max-width: 1550px) {
   .applications-info-section .iphone-content-wrap .slick-slide {
     height: 447px;
   }
 
   .applications-content-wrap .center-menu-wrap {
     width: 426px;
-    margin: 0;
+    margin: 0 auto;
   }
   .applications-content-wrap .center-menu-wrap .iphone-wrap {
     height: 635px;
     padding: 46px 86px 143px 90px;
     background-size: cover;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .application-design-wrap.content {
+    width: calc(100% - 30px);
+    margin-right: 0;
+  }
+  .application-design-wrap .application-design h1 {
+    font-size: 52px;
   }
 
   .what-do-you-get-section .what-do-you-get-item {
@@ -892,7 +1035,7 @@
     max-width: 410px;
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 991px) {
   .bg-button-wrapper {
     max-width: 280px;
   }
@@ -918,11 +1061,12 @@
   }
 
   .application-design-wrap {
-    padding: 20px 0 30px;
+    padding: 100px 0 30px;
     flex-direction: column;
+    margin-bottom: 50px;
   }
   .application-design-wrap .application-design {
-    width: 47%;
+    width: 100%;
   }
   .application-design-wrap .application-design h1 {
     font-size: 30px;
@@ -936,8 +1080,9 @@
     margin-bottom: 13px;
   }
   .application-design-wrap .application-design-image {
-    width: 100%;
-    min-height: 500px;
+    width: 80%;
+    min-height: 410px;
+    margin: 0 0 0 auto;
   }
 
   .what-do-you-get-section .what-do-you-get-item {
@@ -950,10 +1095,14 @@
     border-right: none;
   }
 
-  .applications-content-wrap {
+  .applications-info-section .applications-content-wrap {
     flex-wrap: wrap;
     margin: 35px 0 75px;
   }
+  .applications-info-section .application-info-wrap {
+    flex-direction: row;
+  }
+
   .applications-content-wrap .left-menu-wrap {
     max-width: 100%;
     margin-bottom: 50px;
@@ -962,8 +1111,9 @@
     width: 45%;
     padding: 0 39px 0 0;
   }
-  .applications-content-wrap .application-info-wrap {
-    flex-direction: row;
+  .applications-content-wrap .application-info-link {
+    font-size: 20px;
+    margin-top: -6px;
   }
 
   .applications-info-wrap .item-title {
@@ -1047,7 +1197,7 @@
     font-size: 30px;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 767px) {
   .section-title {
     font-size: 26px;
   }
@@ -1110,25 +1260,39 @@
   .applications-info-section {
     padding: 73px 0 2px;
   }
+  .applications-info-section .applications-slider:before {
+    width: 20px;
+  }
   .applications-info-section .iphone-content-wrap .slick-slide {
-    height: 464px;
+    height: 382px;
+  }
+
+  .applications-info-section .application-name {
+    font-size: 20px;
   }
 
   .applications-content-wrap .left-menu-wrap {
     max-width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
   .applications-content-wrap .left-menu-wrap .application-info-content {
     width: 100%;
-    padding: 0 15px 0 0;
+    padding: 0 15px 20px 0;
+  }
+  .applications-content-wrap .application-info-content.desktop {
+    display: none;
+  }
+  .applications-content-wrap .application-info-content.mobile {
+    display: block;
+    margin-bottom: 30px;
   }
   .applications-content-wrap .center-menu-wrap {
-    width: 436px;
-    margin: 0 0 0 -40px;
+    width: 363px;
+    margin: 0 0 0 -15px;
   }
   .applications-content-wrap .center-menu-wrap .iphone-wrap {
-    height: 649px;
-    padding: 50px 86px 150px 90px;
+    height: 541px;
+    padding: 51px 73px 109px 76px;
   }
   .applications-content-wrap .application-info-wrap {
     flex-direction: column;
@@ -1224,6 +1388,11 @@
     padding: 30px 20px 65px;
     flex-direction: column;
     margin: 0 -20px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .application-design-wrap .application-design-image {
+    min-height: 280px;
   }
 }
 

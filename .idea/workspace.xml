@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fc03fef-44b9-44fd-a522-e54aebfa1e8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/scss/target-audience.css.map" afterDir="false" />
+    <list default="true" id="4fc03fef-44b9-44fd-a522-e54aebfa1e8d" name="Default Changelist" comment="Top animation #4">
+      <change afterPath="$PROJECT_DIR$/assets/images/appStore.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/googleStore.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/style.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/front.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/front.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/target-audience.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/target-audience.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/target-audience.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/target-audience.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/target-audience.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/target-audience.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +44,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/fonts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -56,11 +60,11 @@
       <recent name="D:\Job\the-target-audience\assets" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Job\the-target-audience\assets\fonts" />
       <recent name="D:\Job\the-target-audience\assets\images" />
       <recent name="D:\Job\the-target-audience\assets\images\screens" />
       <recent name="D:\Job\the-target-audience\assets\scss" />
       <recent name="D:\Job\the-target-audience\assets\js" />
-      <recent name="D:\Job\the-target-audience\assets\images\app-logo" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -80,7 +84,11 @@
       <workItem from="1622048090571" duration="16000" />
       <workItem from="1622359551219" duration="127000" />
       <workItem from="1622365258372" duration="9000" />
-      <workItem from="1622380904159" duration="11179000" />
+      <workItem from="1622380904159" duration="17582000" />
+      <workItem from="1622484185158" duration="5528000" />
+      <workItem from="1622489792206" duration="304000" />
+      <workItem from="1622613393896" duration="315000" />
+      <workItem from="1622953828190" duration="5687000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1621772895734</created>
@@ -110,7 +118,35 @@
       <option name="project" value="LOCAL" />
       <updated>1622391496333</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Top animation #2">
+      <created>1622392208284</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1622392208284</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Top animation #3">
+      <created>1622392558565</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1622392558565</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Top animation #4">
+      <created>1622395614650</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1622395614650</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add footer">
+      <created>1622396148096</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1622396148096</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,17 +157,21 @@
     <MESSAGE value="mob version" />
     <MESSAGE value="Application slider tab section" />
     <MESSAGE value="Top animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Top animation" />
+    <MESSAGE value="Top animation #2" />
+    <MESSAGE value="Top animation #3" />
+    <MESSAGE value="Top animation #4" />
+    <MESSAGE value="Add footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add footer" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#Deployment" timestamp="1620322893970">
+    <state x="552" y="178" key="#Deployment" timestamp="1622396127179">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#Deployment/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620322893970" />
-    <state x="536" y="165" key="#SSH_Configurations" timestamp="1620322883644">
+    <state x="552" y="178" key="#Deployment/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622396127179" />
+    <state x="536" y="165" key="#SSH_Configurations" timestamp="1622395673538">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="536" y="165" key="#SSH_Configurations/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620322883644" />
+    <state x="536" y="165" key="#SSH_Configurations/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622395673538" />
     <state x="278" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1622389203295">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -140,30 +180,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620322937714" />
-    <state x="252" y="88" width="1339" height="863" key="CommitChangelistDialog2" timestamp="1622391495260">
+    <state x="252" y="88" width="1339" height="863" key="CommitChangelistDialog2" timestamp="1622396147408">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="252" y="88" width="1339" height="863" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622391495260" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1620326581921">
+    <state x="252" y="88" width="1339" height="863" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622396147408" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1622613706779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620326581921" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622613706779" />
     <state x="583" y="418" width="524" height="204" key="Github.ShareDialog" timestamp="1621772762771">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="583" y="418" width="524" height="204" key="Github.ShareDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1621772762771" />
-    <state x="552" y="253" width="816" height="750" key="Vcs.Push.Dialog.v2" timestamp="1622391497874">
+    <state x="797" y="222" key="RollbackChangesDialog" timestamp="1622957851338">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" width="816" height="750" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622391497874" />
+    <state x="797" y="222" key="RollbackChangesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622957851338" />
+    <state x="552" y="253" width="816" height="750" key="Vcs.Push.Dialog.v2" timestamp="1622396149842">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" width="816" height="750" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622396149842" />
     <state x="816" y="419" key="WebDeployment.AddServerDialog.v.1" timestamp="1620322568323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="816" y="419" key="WebDeployment.AddServerDialog.v.1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620322568323" />
-    <state x="770" y="250" key="ftp.server.browser" timestamp="1620322835706">
+    <state x="770" y="250" key="ftp.server.browser" timestamp="1622395690500">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="770" y="250" key="ftp.server.browser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620322835706" />
+    <state x="770" y="250" key="ftp.server.browser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622395690500" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1622388678340">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

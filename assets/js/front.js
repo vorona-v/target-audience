@@ -29,9 +29,15 @@ for (let smoothLink of smoothLinks) {
 
     $appTabSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
         contentShowBlock(nextSlide, 'app-content-js');
-        reinitSlider('.iphone-content-wrap');
+        reinitSlider('.iphone-content-wrap', {
+            infinite: false
+        });
+
+        $appContentSlider.find($('.slick-next')).addClass('animated');
     });
-    $appContentSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){contentShowBlock(nextSlide, 'app-desc-js');});
+    $appContentSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        contentShowBlock(nextSlide, 'app-desc-js');
+    });
 
     function reinitSlider(selector, options) {
         let $slider = $(selector);
@@ -60,7 +66,17 @@ for (let smoothLink of smoothLinks) {
         contentShowBlock(0, wrapName);
     }
 
+    function animateAppScreens() {
+        let $screens = $('.application-design-image');
+
+        $screens.addClass('animate');
+    }
+
     tabs();
     contents();
+
+    $(document).ready(function() {
+        animateAppScreens();
+    });
 
 })(jQuery);
