@@ -396,6 +396,25 @@
 .applications-info-section .applications-content-wrap {
   margin: 70px 0 100px;
 }
+.applications-info-section .application-content {
+  position: relative;
+}
+.applications-info-section .application-content:before {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  height: 5px;
+  width: 112px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
 .applications-info-section .iphone-content-wrap .slick-slide {
   display: -webkit-box;
   display: -webkit-flex;
@@ -403,13 +422,19 @@
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
-  height: 559px;
+  height: 674px;
+  overflow: hidden;
+}
+.applications-info-section .iphone-content-wrap .slick-list {
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  border-radius: 32px;
 }
 .applications-info-section .iphone-content-wrap .slick-arrow {
-  top: initial;
-  bottom: -50px;
-  width: 40px;
-  height: 40px;
+  top: -27px;
+  width: 55px;
+  height: 55px;
   -moz-transform: translate(0, 0);
   -o-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
@@ -418,8 +443,8 @@
 }
 .applications-info-section .iphone-content-wrap .slick-arrow:before {
   content: "";
-  width: 40px;
-  height: 40px;
+  width: 55px;
+  height: 55px;
   display: inline-block;
   opacity: 1;
   background-repeat: no-repeat;
@@ -436,7 +461,7 @@
   opacity: 0.2;
 }
 .applications-info-section .iphone-content-wrap .slick-prev {
-  left: 25px;
+  left: calc(100% + 128px);
 }
 .applications-info-section .iphone-content-wrap .slick-prev:before {
   background-image: url("../images/arrow.svg");
@@ -447,7 +472,7 @@
   transform: rotate(180deg);
 }
 .applications-info-section .iphone-content-wrap .slick-next {
-  right: 25px;
+  left: calc(100% + 218px);
 }
 .applications-info-section .iphone-content-wrap .slick-next:before {
   background-image: url("../images/arrow.svg");
@@ -457,16 +482,16 @@
 }
 @keyframes animate {
   from {
-    right: 15px;
+    left: calc(100% + 230px);
   }
   25% {
-    right: 25px;
+    left: calc(100% + 218px);
   }
   50% {
-    right: 15px;
+    left: calc(100% + 230px);
   }
   to {
-    right: 25px;
+    left: calc(100% + 218px);
   }
 }
 .applications-info-section .application-company-info {
@@ -493,11 +518,11 @@
   overflow: auto;
 }
 .applications-info-section .iphone-content-body::-webkit-scrollbar {
-  width: 5px;
-  background-color: rgba(0, 0, 0, 0.3);
+  width: 3px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .applications-info-section .iphone-content-body::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .applications-content-wrap {
@@ -513,6 +538,7 @@
 }
 .applications-content-wrap .application-info-content.desktop {
   display: block;
+  margin-bottom: 73px;
 }
 .applications-content-wrap .application-info-content.mobile {
   display: none;
@@ -531,16 +557,16 @@
   text-decoration-color: white;
 }
 .applications-content-wrap .center-menu-wrap {
-  width: 527px;
+  width: 520px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  margin: 0 10px;
+  margin: 15px 27px 0 10px;
 }
 .applications-content-wrap .center-menu-wrap .iphone-wrap {
-  height: 782px;
+  height: 778px;
   box-sizing: border-box;
-  padding: 80px 105px 143px 109px;
+  padding: 14px 102px 90px 107px;
   background-image: url("../images/iphone-bg.png");
   background-repeat: no-repeat;
 }
@@ -550,21 +576,27 @@
 .applications-content-wrap .right-menu-wrap {
   flex-grow: 1;
   max-width: 340px;
+  padding-top: 68px;
 }
 .applications-content-wrap .right-menu-wrap .item-title {
   color: #ffffff;
 }
 .applications-content-wrap .right-menu-wrap .item-content a {
   display: inline-block;
+  transition: background-color 0.2s;
+  max-width: 250px;
+  margin-bottom: 10px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
 }
 .applications-content-wrap .right-menu-wrap .item-content a img {
-  max-width: 75%;
   width: 100%;
   vertical-align: bottom;
-  transition: filter 0.2s;
 }
-.applications-content-wrap .right-menu-wrap .item-content a:hover img {
-  filter: drop-shadow(2px 4px 6px black);
+.applications-content-wrap .right-menu-wrap .item-content a:hover {
+  background-color: #ffffff;
 }
 
 .applications-info-wrap {
@@ -976,16 +1008,22 @@
 
 @media screen and (max-width: 1550px) {
   .applications-info-section .iphone-content-wrap .slick-slide {
-    height: 447px;
+    height: 552px;
+  }
+  .applications-info-section .iphone-content-wrap .slick-list {
+    -webkit-border-radius: 28px;
+    -moz-border-radius: 28px;
+    -ms-border-radius: 28px;
+    border-radius: 28px;
   }
 
   .applications-content-wrap .center-menu-wrap {
     width: 426px;
-    margin: 0 auto;
+    margin: 0 44px;
   }
   .applications-content-wrap .center-menu-wrap .iphone-wrap {
-    height: 635px;
-    padding: 46px 86px 143px 90px;
+    height: 630px;
+    padding: 11px 85px 68px 87px;
     background-size: cover;
   }
 }
@@ -996,6 +1034,16 @@
   }
   .application-design-wrap .application-design h1 {
     font-size: 52px;
+  }
+
+  .applications-content-wrap .left-menu-wrap {
+    flex-grow: initial;
+    max-width: initial;
+    width: calc(100% - 426px - 28%);
+  }
+  .applications-content-wrap .right-menu-wrap {
+    max-width: initial;
+    width: 28%;
   }
 
   .what-do-you-get-section .what-do-you-get-item {
@@ -1112,14 +1160,32 @@
   .applications-info-section .application-info-wrap {
     flex-direction: row;
   }
+  .applications-info-section .iphone-content-wrap .slick-slide {
+    height: 460px;
+  }
+  .applications-info-section .iphone-content-wrap .slick-prev {
+    left: calc(100% + 91px);
+  }
+  .applications-info-section .iphone-content-wrap .slick-next {
+    left: calc(100% + 189px);
+  }
 
   .applications-content-wrap .left-menu-wrap {
     max-width: 100%;
+    width: 100%;
     margin-bottom: 50px;
   }
   .applications-content-wrap .left-menu-wrap .application-info-content {
     width: 45%;
     padding: 0 39px 0 0;
+  }
+  .applications-content-wrap .center-menu-wrap {
+    width: 355px;
+    margin: 0 20px 0 0;
+  }
+  .applications-content-wrap .center-menu-wrap .iphone-wrap {
+    height: 529px;
+    padding: 9px 70px 62px 71px;
   }
   .applications-content-wrap .application-info-link {
     font-size: 20px;
@@ -1274,11 +1340,30 @@
     width: 20px;
   }
   .applications-info-section .iphone-content-wrap .slick-slide {
-    height: 382px;
+    height: 455px;
   }
-
+  .applications-info-section .iphone-content-wrap .slick-list {
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    -ms-border-radius: 22px;
+    border-radius: 22px;
+  }
+  .applications-info-section .iphone-content-wrap .slick-arrow {
+    top: calc(100% + 38px);
+  }
+  .applications-info-section .iphone-content-wrap .slick-prev {
+    left: 31px;
+  }
+  .applications-info-section .iphone-content-wrap .slick-next {
+    left: initial;
+    right: 33px;
+  }
   .applications-info-section .application-name {
     font-size: 20px;
+  }
+  .applications-info-section .application-content:before {
+    height: 3px;
+    width: 88px;
   }
 
   .applications-content-wrap .left-menu-wrap {
@@ -1297,12 +1382,15 @@
     margin-bottom: 30px;
   }
   .applications-content-wrap .center-menu-wrap {
-    width: 363px;
-    margin: 0 0 0 -15px;
+    width: 353px;
+    margin: 0 0 0 -20px;
   }
   .applications-content-wrap .center-menu-wrap .iphone-wrap {
-    height: 541px;
-    padding: 51px 73px 109px 76px;
+    height: 526px;
+    padding: 10px 71px 55px 72px;
+  }
+  .applications-content-wrap .right-menu-wrap {
+    padding-top: 20px;
   }
   .applications-content-wrap .application-info-wrap {
     flex-direction: column;

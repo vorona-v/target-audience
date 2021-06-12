@@ -331,23 +331,42 @@
     .applications-content-wrap {
         margin: 70px 0 100px;
     }
+    .application-content {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 6px;
+            left: 50%;
+            height: 5px;
+            width: 112px;
+            border-radius: 10px;
+            background: rgba(0,0,0,0.5);
+            z-index: 2;
+            @include transform(translate(-50%,0));
+        }
+    }
     .iphone-content-wrap {
         .slick-slide {
             @include flexbox;
             flex-direction: column;
-            height: 559px;
+            height: 674px;
+            overflow: hidden;
+            
+        }
+        .slick-list {
+            @include border-radius(32px);
         }
         .slick-arrow {
-            top: initial;
-            bottom: -50px;
-            width: 40px;
-            height: 40px;
+            top: -27px;
+            width: 55px;
+            height: 55px;
             @include transform(translate(0, 0));
             
             &:before {
                 content: '';
-                width: 40px;
-                height: 40px;
+                width: 55px;
+                height: 55px;
                 display: inline-block;
                 opacity: 1;
                 background-repeat: no-repeat;
@@ -364,14 +383,14 @@
             &:before {opacity: .2}
         }
         .slick-prev {
-            left: 25px;
+            left: calc(100% + 128px);
             &:before {
                 background-image: url("../images/arrow.svg");
                 @include transform(rotate(180deg));
             }
         }
         .slick-next {
-            right: 25px;
+            left: calc(100% + 218px);
             &:before {
                 background-image: url("../images/arrow.svg");
             }
@@ -380,10 +399,10 @@
                 animation: animate 2s;
     
                 @keyframes animate {
-                    from {right: 15px}
-                    25% {right: 25px;}
-                    50% {right: 15px;}
-                    to {right: 25px;}
+                    from {left: calc(100% + 230px);}
+                    25% {left: calc(100% + 218px);}
+                    50% {left: calc(100% + 230px);}
+                    to {left: calc(100% + 218px);}
                 }
             }
         }
@@ -410,14 +429,14 @@
         flex-grow: 1;
         overflow: auto;
         @include scrollbar {
-            width: 5px;
-            background-color: rgba(0,0,0,0.3);
+            width: 3px;
+            background-color: rgba(0,0,0,0.2);
         }
         @include scrollbar-track {
         
         }
         @include scrollbar-thumb {
-            background-color: rgba(0,0,0,0.7);
+            background-color: rgba(0,0,0,0.5);
         }
     }
     
@@ -432,6 +451,7 @@
     .application-info-content {
         &.desktop {
             display: block;
+            margin-bottom: 73px;
         }
         &.mobile {
             display: none;
@@ -451,15 +471,15 @@
         }
     }
     .center-menu-wrap {
-        width: 527px;
+        width: 520px;
         -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
         flex-shrink: 0;
-        margin: 0 10px;
+        margin: 15px 27px 0 10px;
         .iphone-wrap {
-            height: 782px;
+            height: 778px;
             box-sizing: border-box;
-            padding: 80px 105px 143px 109px;
+            padding: 14px 102px 90px 107px;
             background-image: url("../images/iphone-bg.png");
             background-repeat: no-repeat;
         }
@@ -472,6 +492,7 @@
     .right-menu-wrap {
         flex-grow: 1;
         max-width: 340px;
+        padding-top: 68px;
         .item-title {
             color: #ffffff;
         }
@@ -479,17 +500,18 @@
         .item-content {
             a {
                 display: inline-block;
+                transition: background-color 0.2s;
+                max-width: 250px;
+                margin-bottom: 10px;
+                @include border-radius(8px);
+                
                 img {
-                    max-width: 75%;
                     width: 100%;
                     vertical-align: bottom;
-                    transition: filter 0.2s;
                 }
                 
                 &:hover {
-                    img {
-                        filter: drop-shadow(2px 4px 6px black);
-                    }
+                    background-color: #ffffff;
                 }
             }
         }
@@ -852,17 +874,20 @@
     .applications-info-section {
         .iphone-content-wrap {
             .slick-slide {
-                height: 447px;
+                height: 552px;
+            }
+            .slick-list {
+                @include border-radius(28px);
             }
         }
     }
     .applications-content-wrap {
         .center-menu-wrap {
             width: 426px;
-            margin: 0 auto;
+            margin: 0 44px;
             .iphone-wrap {
-                height: 635px;
-                padding: 46px 86px 143px 90px;
+                height: 630px;
+                padding: 11px 85px 68px 87px;
                 background-size: cover;
             }
         }
@@ -883,9 +908,17 @@
         }
     }
     
-    
-    
-    
+    .applications-content-wrap {
+        .left-menu-wrap {
+            flex-grow: initial;
+            max-width: initial;
+            width: calc(100% - 426px - 28%);
+        }
+        .right-menu-wrap {
+            max-width: initial;
+            width: 28%;
+        }
+    }
     
     .what-do-you-get-section {
         .what-do-you-get-item {
@@ -1008,11 +1041,23 @@
         .application-info-wrap {
             flex-direction: row;
         }
+        .iphone-content-wrap {
+            .slick-slide {
+                height: 460px;
+            }
+            .slick-prev {
+                left: calc(100% + 91px);
+            }
+            .slick-next {
+                left: calc(100% + 189px);
+            }
+        }
     }
     
     .applications-content-wrap {
         .left-menu-wrap {
             max-width: 100%;
+            width: 100%;
             margin-bottom: 50px;
             .application-info-content {
                 width: 45%;
@@ -1020,7 +1065,14 @@
                 
             }
         }
-        
+        .center-menu-wrap {
+            width: 355px;
+            margin: 0 20px 0 0;
+            .iphone-wrap {
+                height: 529px;
+                padding: 9px 70px 62px 71px;
+            }
+        }
         
         .application-info-link {
             font-size: 20px;
@@ -1181,12 +1233,32 @@
                 width: 20px;
             }
         }
-        .iphone-content-wrap .slick-slide {
-            height: 382px;
+        .iphone-content-wrap {
+            .slick-slide {
+                height: 455px;
+            }
+            .slick-list {
+                @include border-radius(22px);
+            }
+            .slick-arrow {
+                top: calc(100% + 38px);
+            }
+            .slick-prev {
+                left: 31px;
+            }
+            .slick-next {
+                left: initial;
+                right: 33px;
+            }
+            
         }
-    }
-    .applications-info-section .application-name {
-        font-size: 20px;
+        .application-name {
+            font-size: 20px;
+        }
+        .application-content:before {
+            height: 3px;
+            width: 88px;
+        }
     }
     .applications-content-wrap {
         .left-menu-wrap {
@@ -1209,12 +1281,16 @@
             }
         }
         .center-menu-wrap {
-            width: 363px;
-            margin: 0 0 0 -15px;
+            width: 353px;
+            margin: 0 0 0 -20px;
             .iphone-wrap {
-                height: 541px;
-                padding: 51px 73px 109px 76px;
+                height: 526px;
+                padding: 10px 71px 55px 72px;
             }
+        }
+    
+        .right-menu-wrap {
+            padding-top: 20px;
         }
         .application-info-wrap {
             flex-direction: column;

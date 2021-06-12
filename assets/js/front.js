@@ -75,7 +75,8 @@ for (let smoothLink of smoothLinks) {
     tabs();
     contents();
 
-    $(document).ready(function() {
+    $('.application-slide-wrap img').load(function() {
+        console.log('load');
         animateAppScreens();
     });
 

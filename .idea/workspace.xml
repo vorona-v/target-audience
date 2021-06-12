@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fc03fef-44b9-44fd-a522-e54aebfa1e8d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/appStoreButton.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/googleStoreButton.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/screens/seventh-screen.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/screens/sixth-screen.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/iphone-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/iphone-bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/screens/bottom-navigation.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/screens/bottom-navigation.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/screens/fifth-screen.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/screens/fifth-screen.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/screens/first-screen.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/screens/first-screen.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/screens/fourth-screen.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/screens/fourth-screen.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/screens/second-screen.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/screens/second-screen.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/screens/third-screen.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/screens/third-screen.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/front.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/front.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/target-audience.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/target-audience.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/target-audience.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/target-audience.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/target-audience.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/target-audience.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +52,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images/screens" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -50,13 +64,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Job\the-target-audience\assets\images" />
       <recent name="D:\Job\the-target-audience\assets\scss" />
       <recent name="D:\Job\the-target-audience\assets" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Job\the-target-audience\assets\fonts" />
-      <recent name="D:\Job\the-target-audience\assets\images" />
       <recent name="D:\Job\the-target-audience\assets\images\screens" />
+      <recent name="D:\Job\the-target-audience\assets\images" />
+      <recent name="D:\Job\the-target-audience\assets\fonts" />
       <recent name="D:\Job\the-target-audience\assets\scss" />
       <recent name="D:\Job\the-target-audience\assets\js" />
     </key>
@@ -82,7 +97,10 @@
       <workItem from="1622484185158" duration="5528000" />
       <workItem from="1622489792206" duration="304000" />
       <workItem from="1622613393896" duration="315000" />
-      <workItem from="1622953828190" duration="5887000" />
+      <workItem from="1622953828190" duration="6310000" />
+      <workItem from="1623045890709" duration="12000" />
+      <workItem from="1623131641417" duration="4695000" />
+      <workItem from="1623500578056" duration="10802000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1621772895734</created>
@@ -147,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622962059530</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fix style css #2">
+      <created>1622962284639</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1622962284639</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +188,8 @@
     <MESSAGE value="Top animation #4" />
     <MESSAGE value="Add footer" />
     <MESSAGE value="Fix style css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix style css" />
+    <MESSAGE value="Fix style css #2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix style css #2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1622396127179">
@@ -182,10 +208,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620322937714" />
-    <state x="252" y="88" width="1339" height="863" key="CommitChangelistDialog2" timestamp="1622962058661">
+    <state x="252" y="88" width="1339" height="863" key="CommitChangelistDialog2" timestamp="1622962283986">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="252" y="88" width="1339" height="863" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622962058661" />
+    <state x="252" y="88" width="1339" height="863" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622962283986" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1623501898842">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1623501898842" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1622613706779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -198,10 +228,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="797" y="222" key="RollbackChangesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622957851338" />
-    <state x="552" y="253" width="816" height="750" key="Vcs.Push.Dialog.v2" timestamp="1622962061157">
+    <state x="552" y="253" width="816" height="750" key="Vcs.Push.Dialog.v2" timestamp="1622962286081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" width="816" height="750" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622962061157" />
+    <state x="552" y="253" width="816" height="750" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622962286081" />
     <state x="816" y="419" key="WebDeployment.AddServerDialog.v.1" timestamp="1620322568323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
