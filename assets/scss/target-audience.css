@@ -192,26 +192,41 @@
 .application-design-wrap .design-image-2 {
   width: 21.5%;
   top: 23px;
-  right: 22%;
+  right: 10%;
 }
 .application-design-wrap .design-image-3 {
   width: 21.5%;
   top: 22px;
-  right: 37%;
+  right: 12%;
 }
 .application-design-wrap .design-image-4 {
   width: 21.5%;
   top: 21px;
-  right: 53%;
+  right: 14%;
 }
 .application-design-wrap .design-image-5 {
   width: 30.28%;
   top: -7px;
-  right: 65%;
+  right: 14%;
 }
 .application-design-wrap .design-image-6 {
   width: 19.7%;
   top: -8px;
+  right: 5%;
+}
+.application-design-wrap .animate .design-image-2 {
+  right: 22%;
+}
+.application-design-wrap .animate .design-image-3 {
+  right: 37%;
+}
+.application-design-wrap .animate .design-image-4 {
+  right: 53%;
+}
+.application-design-wrap .animate .design-image-5 {
+  right: 65%;
+}
+.application-design-wrap .animate .design-image-6 {
   right: 78%;
 }
 @keyframes gum-2 {
@@ -315,6 +330,8 @@
   margin-top: 10px;
   color: #000000;
   font-size: 18px;
+  border: none;
+  cursor: pointer;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
@@ -519,7 +536,7 @@
 }
 .applications-info-section .iphone-content-body::-webkit-scrollbar {
   width: 3px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
 }
 .applications-info-section .iphone-content-body::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.5);
@@ -585,7 +602,7 @@
   display: inline-block;
   transition: background-color 0.2s;
   max-width: 250px;
-  margin-bottom: 10px;
+  margin: 15px 0 10px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
@@ -1491,6 +1508,126 @@
 @media screen and (max-width: 380px) {
   .application-design-wrap .application-design-image {
     min-height: 280px;
+  }
+}
+/*Modal window*/
+body.hidden {
+  overflow: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
+  -webkit-overflow-scrolling: touch;
+  margin-right: 17px;
+}
+
+.modalOverlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 995;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.modalOverlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modalWindow {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  max-width: 900px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 997;
+  padding: 30px;
+  background-color: #fff;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+}
+.modalWindow.active {
+  opacity: 1;
+  visibility: visible;
+}
+@media screen and (max-width: 991px) {
+  .modalWindow {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modalWindow {
+    max-height: 80vh;
+    height: 100%;
+    padding: 30px 0 30px 30px;
+  }
+}
+
+.modalClose {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #000000;
+  cursor: pointer;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.modalClose:hover {
+  opacity: 0.5;
+}
+
+.modalContent .modalTitle {
+  padding: 0;
+  margin: 0 0 25px;
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.5px;
+}
+.modalContent .modalText p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .modalContent {
+    overflow: auto;
+    height: 100%;
+    padding-right: 30px;
+  }
+  .modalContent .modalText p {
+    font-size: 16px;
   }
 }
 

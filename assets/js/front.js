@@ -11,6 +11,53 @@ for (let smoothLink of smoothLinks) {
     });
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    let modalButtons = document.querySelectorAll('.js-open-modal'),
+        overlay      = document.querySelector('.js-overlay-modal'),
+        closeButtons = document.querySelectorAll('.js-modal-close');
+
+    modalButtons.forEach(function(item){
+        item.addEventListener('click', function(e) {
+
+            e.preventDefault();
+
+            let modalId = this.getAttribute('data-modal'),
+                modalElem = document.querySelector('.modalWindow[data-modal="' + modalId + '"]');
+
+            modalElem.classList.add('active');
+            overlay.classList.add('active');
+            document.body.classList.add('hidden');
+        });
+    });
+
+    closeButtons.forEach(function(item){
+        item.addEventListener('click', function(e) {
+            let parentModal = this.closest('.modalWindow');
+
+            parentModal.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.classList.remove('hidden');
+        });
+    });
+
+    document.body.addEventListener('keyup', function (e) {
+        let key = e.keyCode;
+
+        if (key == 27) {
+
+            document.querySelector('.modalWindow.active').classList.remove('active');
+            document.querySelector('.modalOverlay').classList.remove('active');
+        }
+    }, false);
+
+    overlay.addEventListener('click', function() {
+        document.querySelector('.modalWindow.active').classList.remove('active');
+        this.classList.remove('active');
+        document.body.classList.remove('hidden');
+    });
+});
+
+
 (function($) {
     const $appTabSlider = $('.applications-slider');
     const $appContentSlider = $('.iphone-content-wrap');
@@ -68,16 +115,29 @@ for (let smoothLink of smoothLinks) {
 
     function animateAppScreens() {
         let $screens = $('.application-design-image');
+        let $images = $('.design-image-wrap img');
+        let unloaded_count = 0
+        let loaded_count = 0;
 
-        $screens.addClass('animate');
+        $.each($images, function(index, item) {
+            let $image = $(item);
+            if ( ! $image.prop('complete')) {
+                unloaded_count++;
+                $image.load(function() {
+                    if (++loaded_count === unloaded_count) {
+                        $screens.addClass('animate');
+                    }
+                });
+            }
+        });
+
+        if (unloaded_count === 0) {
+            $screens.addClass('animate');
+        }
     }
 
     tabs();
     contents();
-
-    $('.application-slide-wrap img').load(function() {
-        console.log('load');
-        animateAppScreens();
-    });
+    animateAppScreens();
 
 })(jQuery);
