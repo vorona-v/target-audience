@@ -343,6 +343,7 @@
         .slick-active {
             .application-slide-wrap {
                 background: rgba(255, 255, 255, 0.2);
+                border-color: transparent;
             }
         }
     }
@@ -375,7 +376,7 @@
         .slick-slide {
             @include flexbox;
             flex-direction: column;
-            height: 674px;
+            height: 673px;
             overflow: hidden;
             
         }
@@ -525,18 +526,31 @@
         .item-content {
             a {
                 display: inline-block;
-                transition: background-color 0.2s;
-                max-width: 250px;
-                margin: 15px 0 10px;
-                @include border-radius(8px);
                 
+                max-width: 210px;
+                margin: 15px 0 10px;
+                
+                svg {
+                    transition: background-color 0.2s;
+                    @include border-radius(8px);
+                    background-color: rgba(255,255,255,0.2);
+                    stroke-opacity: 0;
+                    path {
+                        transition: fill 0.2s;
+                    }
+                }
                 img {
                     width: 100%;
                     vertical-align: bottom;
                 }
                 
                 &:hover {
-                    background-color: #ffffff;
+                    svg {
+                        background-color: rgba(255,255,255,1);
+                        path {
+                            fill: #000000;
+                        }
+                    }
                 }
             }
         }
@@ -785,6 +799,7 @@
     background-color: rgba(0,0,0,0.2);
     padding: 50px 77px 66px 35px;
     position: relative;
+    min-height: 350px;
     
     @include flexbox;
     align-items: flex-start;
@@ -820,19 +835,37 @@
             font-family: 'Montserrat', sans-serif;
             text-decoration: none;
         }
-        .contact-form-text {
-            color: #ffffff;
-            font-size: 20px;
-            font-weight: 300;
-            line-height: 1.35;
-            font-family: 'Montserrat', sans-serif;
-        }
     }
     
     .contact-write-form-wrap {
         max-width: 581px;
         width: 100%;
         font-size: 18px;
+        position: relative;
+        padding-bottom: 20px;
+    
+        p {
+            margin: 0;
+            .errortext {
+                color: #FF4646;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                font-size: 18px;
+                line-height: 1.1;
+                font-family: 'Noto Sans', sans-serif;
+                font-weight: 400;
+            }
+        }
+    
+        .contact-form-text {
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 1.1;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 400;
+        }
+        
         .contact-form-title {
             margin-bottom: 17px;
         }
@@ -852,8 +885,8 @@
                 color: rgba(255,255,255,0.5);
             }
             &:invalid, &.error {
-                color: red;
-                border-bottom-color: red;
+                color: #FF4646;
+                border-bottom-color: #FF4646;
             }
             &[type="email"] {
                 margin-bottom: 28px;
@@ -863,6 +896,16 @@
                 border-bottom-color: rgba(255,255,255,1);
             }
             
+        }
+        
+        #comp_1a874e745849a872ed3216f7ab05d36e {
+            max-width: 410px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: 300;
+            line-height: 1.35;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 2px;
         }
     }
     .contact-form-btn {
@@ -899,7 +942,7 @@
     .applications-info-section {
         .iphone-content-wrap {
             .slick-slide {
-                height: 552px;
+                height: 550px;
             }
             .slick-list {
                 @include border-radius(28px);
@@ -1190,6 +1233,11 @@
         .contact-form-title {
             font-size: 30px;
         }
+    
+        #comp_1a874e745849a872ed3216f7ab05d36e {
+            max-width: 100%;
+            font-size: 30px;
+        }
     }
 
 }
@@ -1315,7 +1363,7 @@
         }
     
         .right-menu-wrap {
-            padding-top: 20px;
+            padding-top: 40px;
         }
         .application-info-wrap {
             flex-direction: column;
@@ -1429,7 +1477,7 @@
 
 /*Modal window*/
 body.hidden {
-    overflow: hidden;
+    overflow: hidden!important;
     touch-action: none;
     -ms-touch-action: none;
     -webkit-overflow-scrolling: touch;

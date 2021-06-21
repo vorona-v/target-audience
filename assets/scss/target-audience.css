@@ -402,6 +402,7 @@
 }
 .applications-info-section .applications-slider .slick-active .application-slide-wrap {
   background: rgba(255, 255, 255, 0.2);
+  border-color: transparent;
 }
 .applications-info-section .application-name {
   font-family: "Montserrat", sans-serif;
@@ -439,7 +440,7 @@
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
-  height: 674px;
+  height: 673px;
   overflow: hidden;
 }
 .applications-info-section .iphone-content-wrap .slick-list {
@@ -600,20 +601,30 @@
 }
 .applications-content-wrap .right-menu-wrap .item-content a {
   display: inline-block;
-  transition: background-color 0.2s;
-  max-width: 250px;
+  max-width: 210px;
   margin: 15px 0 10px;
+}
+.applications-content-wrap .right-menu-wrap .item-content a svg {
+  transition: background-color 0.2s;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  stroke-opacity: 0;
+}
+.applications-content-wrap .right-menu-wrap .item-content a svg path {
+  transition: fill 0.2s;
 }
 .applications-content-wrap .right-menu-wrap .item-content a img {
   width: 100%;
   vertical-align: bottom;
 }
-.applications-content-wrap .right-menu-wrap .item-content a:hover {
-  background-color: #ffffff;
+.applications-content-wrap .right-menu-wrap .item-content a:hover svg {
+  background-color: white;
+}
+.applications-content-wrap .right-menu-wrap .item-content a:hover svg path {
+  fill: #000000;
 }
 
 .applications-info-wrap {
@@ -891,6 +902,7 @@
   background-color: rgba(0, 0, 0, 0.2);
   padding: 50px 77px 66px 35px;
   position: relative;
+  min-height: 350px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -927,17 +939,32 @@
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
 }
-.contact-form-section .contact-phone-form-wrap .contact-form-text {
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 1.35;
-  font-family: "Montserrat", sans-serif;
-}
 .contact-form-section .contact-write-form-wrap {
   max-width: 581px;
   width: 100%;
   font-size: 18px;
+  position: relative;
+  padding-bottom: 20px;
+}
+.contact-form-section .contact-write-form-wrap p {
+  margin: 0;
+}
+.contact-form-section .contact-write-form-wrap p .errortext {
+  color: #FF4646;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-size: 18px;
+  line-height: 1.1;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+}
+.contact-form-section .contact-write-form-wrap .contact-form-text {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.1;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
 }
 .contact-form-section .contact-write-form-wrap .contact-form-title {
   margin-bottom: 17px;
@@ -968,14 +995,23 @@
   color: rgba(255, 255, 255, 0.5);
 }
 .contact-form-section .contact-write-form-wrap input:invalid, .contact-form-section .contact-write-form-wrap input.error {
-  color: red;
-  border-bottom-color: red;
+  color: #FF4646;
+  border-bottom-color: #FF4646;
 }
 .contact-form-section .contact-write-form-wrap input[type=email] {
   margin-bottom: 28px;
 }
 .contact-form-section .contact-write-form-wrap input:focus {
   border-bottom-color: white;
+}
+.contact-form-section .contact-write-form-wrap #comp_1a874e745849a872ed3216f7ab05d36e {
+  max-width: 410px;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.35;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 2px;
 }
 .contact-form-section .contact-form-btn {
   height: 50px;
@@ -1025,7 +1061,7 @@
 
 @media screen and (max-width: 1550px) {
   .applications-info-section .iphone-content-wrap .slick-slide {
-    height: 552px;
+    height: 550px;
   }
   .applications-info-section .iphone-content-wrap .slick-list {
     -webkit-border-radius: 28px;
@@ -1289,6 +1325,10 @@
   .contact-form-section .contact-form-title {
     font-size: 30px;
   }
+  .contact-form-section #comp_1a874e745849a872ed3216f7ab05d36e {
+    max-width: 100%;
+    font-size: 30px;
+  }
 }
 @media screen and (max-width: 767px) {
   .section-title {
@@ -1407,7 +1447,7 @@
     padding: 10px 71px 55px 72px;
   }
   .applications-content-wrap .right-menu-wrap {
-    padding-top: 20px;
+    padding-top: 40px;
   }
   .applications-content-wrap .application-info-wrap {
     flex-direction: column;
@@ -1512,7 +1552,7 @@
 }
 /*Modal window*/
 body.hidden {
-  overflow: hidden;
+  overflow: hidden !important;
   touch-action: none;
   -ms-touch-action: none;
   -webkit-overflow-scrolling: touch;
